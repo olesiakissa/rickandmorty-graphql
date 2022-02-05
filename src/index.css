@@ -1,0 +1,104 @@
+:root {
+  --ff-accent: "DM Serif Display", serif;
+  --ff-primary: "Open Sans", sans-serif;
+
+  --clr-gray: hsl(218, 12%, 49%);
+  --clr-light-gray: hsl(0, 0%, 98%);
+  --clr-grayish-blue: hsl(206, 24%, 28%);
+}
+
+*,
+*::before,
+*::after {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+body {
+  font-family: var(--ff-primary);
+}
+
+img {
+  max-width: 100%;
+  display: block;
+}
+
+.fw-300 {
+  font-weight: 300;
+}
+
+.fw-400 {
+  font-weight: 400;
+}
+
+.fw-700 {
+  font-weight: 700;
+}
+
+.flex {
+  display: flex;
+}
+
+#root {
+  flex-direction: column;
+  align-items: center;
+  padding-block: 2rem;
+}
+
+.header {
+  justify-content: center;
+  align-items: center;
+  margin-block-end: 1rem;
+}
+
+.header-logo {
+  width: 2rem;
+  margin-inline-end: 0.5rem;
+}
+
+.header-title {
+  text-transform: uppercase;
+  font-size: 1.5rem;
+  line-height: 1.2;
+  letter-spacing: 0.125rem;
+  color: var(--clr-gray);
+}
+
+.cards-container {
+  padding: 1rem;
+}
+
+.character-card {
+  justify-content: space-between;
+  align-items: flex-start;
+  background-color: var(--clr-light-gray);
+  margin-block-end: 1.5rem;
+  border-radius: 0.75rem;
+}
+
+.character-card > *:not(img) {
+  padding: 0.75rem;
+}
+
+.character-name {
+  font-family: var(--ff-accent);
+  font-size: 1.125rem;
+  color: var(--clr-grayish-blue);
+}
+
+.character-image {
+  width: 30%;
+  border-radius: 0.75rem 0 0 0.75rem;
+}
+
+.character-details {
+  align-self: stretch;
+  flex-direction: column;
+  align-items: flex-end;
+  justify-content: space-between;
+}
+
+.character-link {
+  color: var(--clr-gray);
+}

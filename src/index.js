@@ -7,9 +7,7 @@ import {
   InMemoryCache,
   ApolloProvider
 } from '@apollo/client';
-import { BrowserRouter as Router,
-        Routes,
-        Route } from 'react-router-dom';
+import { BrowserRouter as Router } from 'react-router-dom';
 
 const client = new ApolloClient({
   uri: 'https://rickandmortyapi.com/graphql',
@@ -24,7 +22,6 @@ ReactDOM.render(
           <App />
       </ApolloProvider>
     </Router>
-  </React.StrictMode>
-  ,
+  </React.StrictMode>,
   document.getElementById('root')
 );

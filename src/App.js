@@ -9,7 +9,7 @@ export default function App() {
   return (
     <>
       <Header />
-      <main className="main flex">
+      <main className="main">
       <Routes>
         <Route path='/' element={<Navigate to='/characters'/>}/>
         <Route path='/characters' element={

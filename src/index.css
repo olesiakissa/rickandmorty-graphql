@@ -21,6 +21,7 @@ body {
 }
 
 img {
+  width: 100%;
   max-width: 100%;
   display: block;
 }
@@ -47,7 +48,6 @@ button {
 .flex {
   display: flex;
 }
-
 
 #root {
   min-height: 100vh;
@@ -76,12 +76,9 @@ button {
   color: var(--clr-gray);
 }
 
-.main {
-  justify-content: center;
-}
-
 .cards-container {
   padding: 1rem;
+  flex-direction: column;
 }
 
 .character-card {
@@ -107,7 +104,7 @@ button {
 }
 
 .character-image {
-  width: 30%;
+  width: 25%;
   border-radius: 0.75rem 0 0 0.75rem;
 }
 
@@ -143,10 +140,6 @@ button {
   border-radius: 0.75rem 0.75rem 0 0;
 }
 
-.card-details h2.card-heading {
- font-size: 2rem;
-}
-
 .character-details-card p {
   color: var(--clr-grayish-blue);
 }
@@ -160,4 +153,102 @@ button {
   font-family: var(--ff-accent);
   font-size: 1rem;
   text-transform: uppercase;
+}
+
+@media screen and (min-width: 31.25em) {
+  .header-logo {
+    width: 2.5rem;
+  }
+
+  .header-title {
+    font-size: 1.75rem;
+  }
+
+  .cards-container {
+    padding: 1.5rem;
+  }
+
+  .character-image {
+    width: 45%;
+  }
+
+  .card-heading {
+    font-size: 1.5rem;
+  }
+
+  .character-link {
+    font-size: 1.2rem;
+  }
+}
+
+@media screen and (min-width: 45em) {
+  .header-logo {
+    width: 4rem;
+  }
+
+  .header-title {
+    font-size: 2.5rem;
+  }
+
+  .cards-container {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+  }
+
+  .cards-container > * {
+    width: 30%;
+  }
+
+  .character-card {
+    flex-direction: column;
+    align-items: center;
+    justify-content: flex-start;
+    height: 100%;
+    margin: 0;
+  }
+
+  .character-card:hover {
+    box-shadow: 0px 30px 50px -20px hsla(240, 8%, 70%, 0.39);
+  }
+
+  .character-image {
+    width: 100%;
+    border-radius: 0.75rem 0.75rem 0 0;
+  }
+
+  .character-description {
+    text-align: center;
+    align-self: center;
+    align-items: center;
+  }
+
+  .character-link {
+    align-self: center;
+  }
+
+  .card-details .card-heading {
+    text-align: center;
+  }
+
+  .character-card.details {
+    display: flex;
+    flex-direction: row;
+    margin-block-end: 2rem;
+  }
+
+  .character-card.details img {
+    border-radius: 0.75rem 0 0 0.75rem;
+    width: 50%;
+  }
+
+  .btn-homepage {
+    transition: all .2s ease-in-out;
+  }
+
+  .btn-homepage:hover {
+    opacity: 0.9;
+    transform: scale(1.1);
+  }
 }

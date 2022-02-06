@@ -7,9 +7,9 @@ export default function CharacterDetails() {
   const { id } = useParams();
   const { loading, error, data } = useCharacterDetails(id);
 
+  if (error) return <p>Error happened while fetching the data</p>;
   if (loading) return <p>Loading...</p>;
-  if (error) return <p>${error}</p>;
-
+  
   return (
     <CharacterDetailsCard key={data.character.id} {...data.character}/>
   )

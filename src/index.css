@@ -94,7 +94,7 @@ button {
 }
 
 .character-card > *:not(img) {
-  padding: 0.75rem;
+  padding: 0.6rem;
 }
 
 .card-heading {

@@ -3,11 +3,11 @@ import { Link } from 'react-router-dom';
 
 export default function CharacterDetailsCard(props) {
 return (
-  <div className='character-details-card flex'>
-      <div className='character-card bg-transparent details'>
+  <div className='character-details-card flex' aria-labelledby='character-name' tabIndex={-1}>
+      <h2 className='card-heading' id='character-name'>{props.name}</h2>
+      <div className='character-card bg-transparent details' tabIndex={0}>
               <img src={props.image} alt={props.name} />
               <div className='character-description card-details flex'>
-                <h2 className='card-heading'>{props.name}</h2>
                 <p>{`Status: ${props.status}`}</p>
                 <p>{`Species: ${props.species}`}</p>
                 <h3 className='card-heading fw-700'>Last known location</h3>

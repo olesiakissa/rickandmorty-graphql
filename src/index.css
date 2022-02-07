@@ -2,7 +2,7 @@
   --ff-accent: "DM Serif Display", serif;
   --ff-primary: "Open Sans", sans-serif;
 
-  --clr-gray: hsl(218, 12%, 49%);
+  --clr-gray: hsl(218, 13%, 47%);
   --clr-light-gray: hsl(0, 0%, 98%);
   --clr-grayish-blue: hsl(206, 24%, 28%);
   --clr-white: hsl(0, 0%, 100%);
@@ -99,8 +99,13 @@ button {
 
 .card-heading {
   font-family: var(--ff-accent);
-  font-size: 1.125rem;
+  font-size: 1.25rem;
   color: var(--clr-grayish-blue);
+  margin-block-end: 1rem;
+}
+
+h2.card-heading {
+  font-size: 1.5rem;
 }
 
 .character-image {
@@ -172,8 +177,8 @@ button {
     width: 45%;
   }
 
-  .card-heading {
-    font-size: 1.5rem;
+  h2.card-heading {
+    font-size: 1.75rem;
   }
 
   .character-link {
@@ -182,7 +187,6 @@ button {
 }
 
 @media screen and (min-width: 45em) {
-
   .header {
     margin-block: 1.5rem;
   }
@@ -207,6 +211,10 @@ button {
     width: 30%;
   }
 
+  h2.card-heading {
+    font-size: 2.125rem;
+  }
+
   .character-card {
     flex-direction: column;
     align-items: center;
@@ -228,6 +236,7 @@ button {
     text-align: center;
     align-self: center;
     align-items: center;
+    flex: 1;
   }
 
   .character-link {
